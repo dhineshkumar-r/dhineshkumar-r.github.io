@@ -52,9 +52,11 @@ The following are some practical guidelines for tuning model parallelism degrees
 
 Complementary to model parallelism strategies, the following techniques further help manage GPU memory and address OOMs: 
 * Activation Checkpointing / Recomputation
-  * The idea here is to cache activations of specific layers (as opposed to all layers) during the forward pass and reuse them to compute activations of remaining layers during the backward pass [6].
+  
+  The idea here is to cache activations of specific layers (as opposed to all layers) during the forward pass and reuse them to compute activations of remaining layers during the backward pass [6].
 * Distributed Optimizer
-  * This is a Megatron-specific feature that allows the optimizer state of a model to be partitioned across GPUs of a given DP group [7]. Without this, the optimizer state (the most memory-intensive component) of the model is stored in each GPU.
+  
+  This feature allows the optimizer state of a model to be partitioned across GPUs of a given DP group [7]. Without this, the optimizer state (the most memory-intensive component) of the model is stored in each GPU.
 
 ## Additional Resources
 
