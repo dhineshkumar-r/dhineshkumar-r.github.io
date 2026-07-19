@@ -1,3 +1,5 @@
+# Megatron Model Parllelism Tuning Guide
+
 ## Overview
 
 This guide helps configure model parallelism dimensions for Megatron-based training jobs and manage GPU memory methodically. It covers constraints for validating configurations, tuning guidelines for common scenarios. As there can be different implementations of a given model parallelism technique, this document specifically focuses on implementations relevant to Megatron.
